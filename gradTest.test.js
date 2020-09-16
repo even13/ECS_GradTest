@@ -1,14 +1,22 @@
 createMenuData = (data) => {
   let menuData = [];
 	data.map(string => {
-    let element = string.split("/");
-    console.log(element)
-    menuData.push({
-      title: element[0],
-      data: [element[1]]
-    });
-  })
-	return menuData
+		let element = string.split("/");
+		if (element.length > 1) {
+			let existingGroup = menuData.find(obj => {
+				return obj.title == element[0];
+			});
+			if (existingGroup) {
+				existingGroup.data.push(element[1]);
+			} else {
+				menuData.push({
+          title: element[0],
+          data: [element[1]]
+				});
+			}
+		}
+	})
+	return menuData;
 }
 
 describe("menu Data Generator", () => {

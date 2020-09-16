@@ -1,5 +1,5 @@
-function createMenuData(data) {
-
+createMenuData = (data) => {
+  return data
 }
 
 describe("menu Data Generator", () => {

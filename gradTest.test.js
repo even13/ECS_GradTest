@@ -1,5 +1,14 @@
 createMenuData = (data) => {
-  return data
+  let menuData = [];
+	data.map(string => {
+    let element = string.split("/");
+    console.log(element)
+    menuData.push({
+      title: element[0],
+      data: [element[1]]
+    });
+  })
+	return menuData
 }
 
 describe("menu Data Generator", () => {

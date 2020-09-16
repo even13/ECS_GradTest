@@ -1,4 +1,4 @@
-createMenuData = (data) => {
+function createMenuData(data){
   let menuData = [];
 	data.map(string => {
 		let element = string.split("/");

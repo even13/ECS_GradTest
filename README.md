@@ -1,6 +1,6 @@
 ## My approach on the tech test
 
-I decided to use a .map to iterate over the each element of the array.
+I decided to use a .map to iterate over each element of the array.
 
 The data was an array of strings with the format "parent1/parent1child", so I split each string at the forward slash.
 
